@@ -1,5 +1,5 @@
 import { StarField } from "@/components/StarField"
-import { ChevronDown, Linkedin, Users, LineChart, Clock, Lightbulb, BotIcon as Robot } from "lucide-react"
+import { ChevronDown, TrendingUp, BarChart2, FileSearch, BrainCircuit, BotIcon as Robot } from "lucide-react"
 import { ContactForm } from "@/components/ContactForm"
 import { ChatbotModal } from "@/components/ChatbotModal"
 import { useState, useEffect, useRef } from "react"
@@ -209,16 +209,6 @@ export default function Index() {
       <section className="relative w-full overflow-hidden bg-black" style={heroStyle}>
         {/* Navigation links in top right corner */}
         <div className="absolute top-6 right-6 z-10 flex space-x-3">
-          <a
-            href="https://linkedin.com/company/example"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Профиль в LinkedIn"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white bg-transparent text-white transition-colors hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
-          >
-            <Linkedin className="h-5 w-5" />
-          </a>
-
           <Button
             onClick={scrollToContact}
             variant="outline"
@@ -241,13 +231,13 @@ export default function Index() {
               }}
             >
               <h1 className="text-4xl font-bold text-white md:text-6xl font-heading">
-                Nebula Ventures{" "}
-                <span role="img" aria-label="rocket">
-                  🚀
+                PatentScope{" "}
+                <span role="img" aria-label="chart">
+                  📊
                 </span>
               </h1>
               <p className="mt-4 text-lg text-gray-300 md:text-xl px-4 max-w-xs mx-auto md:max-w-none">
-                Экспертиза в области ИИ и технологий
+                Аналитика патентов России: прогноз роста на 30 лет вперёд
               </p>
               <Button
                 onClick={scrollToAbout}
@@ -255,7 +245,7 @@ export default function Index() {
                 size="sm"
                 className="mt-6 bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors"
               >
-                О нас
+                Узнать больше
               </Button>
             </div>
           </div>
@@ -287,27 +277,23 @@ export default function Index() {
             )}
           >
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gray-700 flex-shrink-0">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-d4g0PyeQftYkhSxiNDNMwiGNNteM3o.svg"
-                  alt="Профиль"
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gray-700 flex-shrink-0 bg-gray-800 flex items-center justify-center">
+                <TrendingUp className="w-24 h-24 text-blue-400" />
               </div>
               <div className="space-y-4 text-center md:text-left px-4 md:px-0">
-                <h2 className="text-3xl font-bold font-heading">О нас</h2>
+                <h2 className="text-3xl font-bold font-heading">О платформе</h2>
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-gray-300">
-                    Мы помогаем компаниям использовать передовые технологии, чтобы радовать клиентов
-                    и оптимизировать бизнес-процессы.
+                    PatentScope — платформа для мониторинга и анализа патентных заявок в России.
+                    Мы агрегируем данные Роспатента и применяем ИИ-модели для точного прогнозирования.
                   </p>
                   <p className="text-gray-300">
-                    Стратегическое планирование, техническое лидерство или практическая поддержка разработки —
-                    мы поможем создать правильные решения для вашего бизнеса.
+                    На основе исторических данных о поданных заявках наша система рассчитывает,
+                    насколько вырастет число патентов в вашей отрасли в ближайшие 30 лет.
                   </p>
                   <p className="text-gray-300">
-                    Наша команда имеет более 10 лет опыта создания сложных технических продуктов
-                    для стартапов и крупных компаний. Свяжитесь с нами или попробуйте ИИ-ассистента.
+                    Помогаем компаниям, исследователям и инвесторам принимать стратегические решения
+                    на основе реальных патентных трендов. Задайте вопрос нашему ИИ-ассистенту.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center md:justify-start">
@@ -316,18 +302,18 @@ export default function Index() {
                       onClick={scrollToContact}
                       variant="outline"
                       size="sm"
-                      className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors w-[140px] mx-auto sm:mx-0"
+                      className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors w-[160px] mx-auto sm:mx-0"
                     >
-                      Связаться
+                      Запросить доступ
                     </Button>
                     <Button
                       onClick={openChatbot}
                       variant="outline"
                       size="sm"
-                      className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors w-[140px] mx-auto sm:mx-0 flex items-center justify-center"
+                      className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors w-[160px] mx-auto sm:mx-0 flex items-center justify-center"
                     >
                       <Robot className="mr-1 h-4 w-4" />
-                      ИИ-чат
+                      ИИ-ассистент
                     </Button>
                   </div>
                 </div>
@@ -346,7 +332,7 @@ export default function Index() {
               isServicesTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            Услуги
+            Возможности платформы
           </h2>
           <div
             ref={servicesContentRef}
@@ -356,46 +342,47 @@ export default function Index() {
             )}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Fractional CPO */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <Users className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">CPO / CTO на аутсорсе</h3>
+                  <FileSearch className="h-7 w-7 text-blue-400 mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Мониторинг заявок</h3>
                 </div>
                 <p className="text-gray-300">
-                  Продуктовое лидерство, выстраивание процессов, развитие команды, технологическая стратегия.
+                  Актуальная база поданных патентных заявок в России. Поиск по отрасли,
+                  ключевым словам, заявителю и дате подачи.
                 </p>
               </div>
 
-              {/* Product Consulting */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <LineChart className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Продуктовый консалтинг</h3>
+                  <BarChart2 className="h-7 w-7 text-blue-400 mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Прогноз роста</h3>
                 </div>
                 <p className="text-gray-300">
-                  Разработка роадмапа, поиск и валидация product-market fit, оценка кандидатов.
+                  ИИ-модель рассчитывает прирост числа патентов в процентах на горизонте
+                  до 30 лет по любой технологической нише.
                 </p>
               </div>
 
-              {/* Interim Leadership */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <Clock className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Временное руководство</h3>
-                </div>
-                <p className="text-gray-300">Временный CPO или VP of Product для компаний в период трансформации.</p>
-              </div>
-
-              {/* Workshops & Advisory */}
-              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
-                <div className="flex items-center mb-4">
-                  <Lightbulb className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Разработка продуктов</h3>
+                  <TrendingUp className="h-7 w-7 text-blue-400 mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Отраслевые тренды</h3>
                 </div>
                 <p className="text-gray-300">
-                  Быстрое прототипирование и запуск внутренних и внешних приложений и сайтов
-                  с использованием современных инструментов.
+                  Сравнение динамики патентной активности по отраслям. Выявление быстрорастущих
+                  и стагнирующих секторов на основе реальных данных.
+                </p>
+              </div>
+
+              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
+                <div className="flex items-center mb-4">
+                  <BrainCircuit className="h-7 w-7 text-blue-400 mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">ИИ-аналитика</h3>
+                </div>
+                <p className="text-gray-300">
+                  Задайте вопрос ИИ-ассистенту и получите аналитическую сводку по
+                  любой теме: конкуренты, риски, инвестиционный потенциал.
                 </p>
               </div>
             </div>
@@ -408,12 +395,15 @@ export default function Index() {
           <h2
             ref={headingRef}
             className={cn(
-              "mb-12 text-center text-3xl font-bold font-heading transition-all duration-1000 ease-out",
+              "mb-4 text-center text-3xl font-bold font-heading transition-all duration-1000 ease-out",
               isHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            Давайте создавать
+            Запросить доступ
           </h2>
+          <p className="text-center text-gray-500 mb-12 text-base">
+            Оставьте заявку — мы расскажем о возможностях платформы и подберём подходящий тариф
+          </p>
           <ContactForm />
         </div>
       </section>
