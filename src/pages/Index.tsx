@@ -231,7 +231,7 @@ export default function Index() {
               }}
             >
               <h1 className="text-4xl font-bold text-white md:text-6xl font-heading">
-                PatentScope{" "}
+                Malyga Analysis{" "}
                 <span role="img" aria-label="chart">
                   📊
                 </span>
@@ -284,7 +284,7 @@ export default function Index() {
                 <h2 className="text-3xl font-bold font-heading">О платформе</h2>
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-gray-300">
-                    PatentScope — платформа для мониторинга и анализа патентных заявок в России.
+                    Malyga Analysis — платформа для мониторинга и анализа патентных заявок в России.
                     Мы агрегируем данные Роспатента и применяем ИИ-модели для точного прогнозирования.
                   </p>
                   <p className="text-gray-300">
@@ -404,7 +404,37 @@ export default function Index() {
           <p className="text-center text-gray-500 mb-12 text-base">
             Оставьте заявку — мы расскажем о возможностях платформы и подберём подходящий тариф
           </p>
-          <ContactForm />
+          <div className="flex flex-col md:flex-row gap-10 items-start justify-center max-w-3xl mx-auto">
+            <ContactForm />
+            <div className="md:w-64 flex-shrink-0 space-y-6 pt-2">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Свяжитесь с нами</p>
+                <a
+                  href="tel:+79080176455"
+                  className="flex items-center gap-3 text-gray-700 hover:text-black transition-colors group"
+                >
+                  <span className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0 group-hover:bg-black transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </span>
+                  <span className="font-medium">+7 908 017 64 55</span>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="mailto:levmalygin924@mail.ru"
+                  className="flex items-center gap-3 text-gray-700 hover:text-black transition-colors group"
+                >
+                  <span className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0 group-hover:bg-black transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </span>
+                  <span className="font-medium break-all">levmalygin924@mail.ru</span>
+                </a>
+              </div>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Ответим в течение одного рабочего дня
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
